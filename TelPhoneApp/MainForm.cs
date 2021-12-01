@@ -31,6 +31,10 @@ namespace TelPhoneApp {
             for (int i = 0; i < pList.Count; ++i)
                 lbDisplay.Items.Add(pList[i].ToString());
         }
+
+        private void MainForm_Load(object sender, EventArgs e) {
+
+        }
     }
 
 
