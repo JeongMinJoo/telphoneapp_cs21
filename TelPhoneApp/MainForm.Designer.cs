@@ -27,19 +27,19 @@ namespace TelPhoneApp {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbDisplay = new System.Windows.Forms.ListBox();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtRemove = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtRemove = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -76,6 +76,16 @@ namespace TelPhoneApp {
             this.label2.TabIndex = 0;
             this.label2.Text = "전화 :";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(262, 58);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "추가";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(85, 40);
@@ -111,16 +121,6 @@ namespace TelPhoneApp {
             this.lbDisplay.Size = new System.Drawing.Size(331, 292);
             this.lbDisplay.TabIndex = 0;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(262, 58);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "추가";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(83, 71);
@@ -129,7 +129,7 @@ namespace TelPhoneApp {
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "검색";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnRemove
             // 
@@ -181,13 +181,6 @@ namespace TelPhoneApp {
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "전화번호 삭제";
             // 
-            // txtRemove
-            // 
-            this.txtRemove.Location = new System.Drawing.Point(57, 37);
-            this.txtRemove.Name = "txtRemove";
-            this.txtRemove.Size = new System.Drawing.Size(143, 21);
-            this.txtRemove.TabIndex = 0;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -196,6 +189,13 @@ namespace TelPhoneApp {
             this.label4.Size = new System.Drawing.Size(37, 12);
             this.label4.TabIndex = 0;
             this.label4.Text = "전화 :";
+            // 
+            // txtRemove
+            // 
+            this.txtRemove.Location = new System.Drawing.Point(57, 37);
+            this.txtRemove.Name = "txtRemove";
+            this.txtRemove.Size = new System.Drawing.Size(143, 21);
+            this.txtRemove.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -208,7 +208,6 @@ namespace TelPhoneApp {
             this.Controls.Add(this.groupBox1);
             this.Name = "MainForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
